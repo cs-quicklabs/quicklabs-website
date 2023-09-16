@@ -1,29 +1,57 @@
-<header
-	class="bg-contain bg-fixed bg-clip-border bg-center bg-no-repeat bg-origin-border lg:bg-local"
+---
+import { Image } from 'astro:assets'
+import heroImage from "../assets/hero.png?url";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon";
+---
+
+<main
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24"
 >
-	<div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-		<div class="flex flex-col items-center justify-center">
-			<div class="flex w-full flex-col">
-				<h1
-					class="mb-12 text-5xl font-extrabold leading-none tracking-tight text-black drop-shadow dark:text-white sm:mt-6 sm:text-7xl lg:font-black lg:leading-tight"
-					data-cy="primary-heading"
-				>
-					<span class="block"
-						><span
-							class="rounded-lg bg-gradient-to-r from-green-500 to-cyan-500 bg-clip-text text-transparent"
-							>Your Business,</span
-						></span
-					><span class="block text-slate-800">Our Software</span><span
-						class="rounded-lg bg-gradient-to-r from-pink-500 to-amber-400 bg-clip-text text-transparent"
-						>Let's Build.</span
-					>
-				</h1><h2
-					class="mb-16 max-w-2xl py-3 text-2xl font-semibold drop-shadow dark:text-slate-100 sm:mb-11"
-				>
-					Helping your business grow with world class, innovative
-					software solutions.
-				</h2>
-			</div>
-		</div>
-	</div>
-</header>
+  <div class="py-6 md:order-1 hidden md:block">
+    <Image
+      src={heroImage}
+      alt="Astronaut in the air"
+      width={600}
+      height={201}
+      loading="eager"
+      format="avif"
+    />
+  </div>
+  <div>
+    <h1
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter"
+    >
+      Marketing website done with Astro
+    </h1>
+    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+      Astroship is a starter template for startups, marketing websites & landing
+      pages.<wbr /> Built with Astro.build and TailwindCSS. You can quickly
+      create any website with this starter.
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      <Link
+        href="#"
+        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
+        target="_blank"
+        class="flex gap-1 items-center justify-center"
+        rel="noopener"
+      >
+        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
+
+         Download for Free
+      </Link>
+      <Link
+        size="lg"
+        style="outline"
+        rel="noopener"
+        href="https://github.com/surjithctly/astroship"
+        class="flex gap-1 items-center justify-center"
+        target="_blank"
+      >
+        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
+         GitHub Repo
+      </Link>
+    </div>
+  </div>
+</main>
