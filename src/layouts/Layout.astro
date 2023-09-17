@@ -9,13 +9,9 @@ export interface Props {
 }
 
 const canonicalURL = new URL(Astro.request.url, Astro.site)
-const resolvedImageWithDomain = "https://www.quicklabs.in/thumbnail.png"
-
+const resolvedImageWithDomain = "https://www.quicklabs.in/thumbnail.png";
 const { title } = Astro.props;
-
-const makeTitle = title
-  ? title 
-  : "Quicklabs";
+const makeTitle = title ? title : "Quicklabs";
 ---
 
 <!DOCTYPE html>
