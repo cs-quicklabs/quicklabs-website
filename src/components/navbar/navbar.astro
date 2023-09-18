@@ -1,6 +1,5 @@
 ---
 import Container from "@components/container.astro";
-import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
@@ -15,7 +14,6 @@ const menuitems = [
       { title: "Quick Checklist", path: "/" },
       { title: "Quick Bio", path: "/" },
       { title: "Quick Send", path: "/" },
-    
     ],
   },
   {
@@ -63,7 +61,8 @@ const menuitems = [
                   <li>
                     <a
                       href={item.path}
-                      class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900">
+                      class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900"
+                    >
                       {item.title}
                     </a>
                   </li>
