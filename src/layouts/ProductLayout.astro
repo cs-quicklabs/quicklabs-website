@@ -1,0 +1,60 @@
+---
+import { SEO } from "astro-seo";
+import Footer from "@components/footer.astro";
+import "@fontsource-variable/inter/index.css";
+
+export interface Props {
+    title: string;
+}
+
+const canonicalURL = new URL(Astro.request.url, Astro.site);
+const resolvedImageWithDomain = "https://www.quicklabs.in/thumbnail.png";
+const { title } = Astro.props;
+const makeTitle = title ? title : "Quicklabs";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <meta name="generator" content={Astro.generator} />
+
+        <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
+        <SEO
+            title={makeTitle}
+            description="Quicklabs builds software for small businesses."
+            canonical={canonicalURL}
+            twitter={{
+                creator: "@surjithctly",
+                site: "@web3templates",
+                card: "summary_large_image",
+            }}
+            openGraph={{
+                basic: {
+                    url: canonicalURL,
+                    type: "website",
+                    title: `Quicklabs`,
+                    image: resolvedImageWithDomain,
+                },
+                image: {
+                    alt: "Astroship Homepage Screenshot",
+                },
+            }}
+        />
+    </head>
+    <body
+        class="bg-white text-slate-700 antialiased selection:bg-blue-500 selection:text-white dark:bg-slate-900 dark:text-slate-400 dark:selection:bg-sky-500"
+    >
+        <slot />
+        <Footer />
+        <style is:global>
+            /* Improve Page speed */
+            /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+            img {
+                content-visibility: auto;
+            }
+        </style>
+    </body>
+</html>
