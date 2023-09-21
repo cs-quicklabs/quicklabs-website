@@ -8,46 +8,56 @@ const products = [
     description:
       "Quickly manage your team, their schedule, KPIs, goals, performance, projects, milestones and much more.",
     icon: "bx:bxs-briefcase",
+    path: "/quick-team",
   },
   {
     title: "Quick Connect",
     description:
       "Quickly document social interactions with your loved ones and never forget important details, not even the tiny ones.",
     icon: "bx:bxs-window-alt",
+    path: "/quick-connect",
   },
   {
     title: "Quick Test",
     description:
       "Quickly manage your manual test cases, generate project health reports and deliver best quality products.",
     icon: "bx:bxs-data",
+    path: "/quick-test",
   },
   {
     title: "Quick Checklist",
     description:
       "Quickly build checklists and never forget any step of your process; share it with your team members.",
     icon: "bx:bxs-bot",
+    path: "/quick-checklist",
   },
   {
     title: "Quick Bio",
     description:
       "Quickly build your one pager social or professional bio, share it with the world and let people know what are you up to.",
     icon: "bx:bxs-file-find",
+    path: "/quick-bio",
   },
   {
     title: "Quick Send",
     description:
       "Quickly add multiple communication channels like emails, SMS, Chats to your mobile and web apps.",
     icon: "bx:bxs-user",
+    path: "/quick-send",
   },
 ];
 ---
 
 <div class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Explore our collection of <span class="italic font-extrabold decoration-solid underline-offset-auto underline decoration-8 decoration-yellow-400">Quick</span> products
+    Explore our collection of <span
+      class="italic font-extrabold decoration-solid underline-offset-auto underline decoration-8 decoration-yellow-400"
+      >Quick</span
+    > products
   </h2>
   <p class="text-lg mt-4 text-slate-600">
-    Quicklabs builds easy to use software products that help you to manage your growing business.
+    Quicklabs builds easy to use software products that help you to manage your
+    growing business.
   </p>
 </div>
 
@@ -61,6 +71,17 @@ const products = [
         <div>
           <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
           <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          <p class="mt-2 hover:text-indigo-500">
+            <a
+              href={item.path}
+              class="hover:underline hover:text-indigo-600 rounded-md text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100 leading-6 text-left text-black dark:text-white"
+            >
+              Learn more{" "}
+              <span class="pl-1 " aria-hidden="true">
+                →
+              </span>
+            </a>
+          </p>
         </div>
       </div>
     ))
