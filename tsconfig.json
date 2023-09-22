@@ -1,6 +1,7 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
+    "types": ["bun-types"],
     "strictNullChecks": true,
     "baseUrl": "src",
     "paths": {
