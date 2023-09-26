@@ -5,22 +5,27 @@ const menuitems = [
   {
     title: 'Home',
     path: '/',
+    target: '_self',
   },
   {
     title: 'Features',
     path: '#features',
+    target: '_self',
   },
   {
     title: 'Pricing',
     path: '#pricing',
+    target: '_self',
   },
   {
     title: 'Faqs',
     path: '#faqs',
+    target: '_self',
   },
   {
     title: 'Login ->',
     path: 'https://bio.quicklabs.in',
+    target: '_blank',
   },
 ];
 ---
@@ -49,7 +54,7 @@ const menuitems = [
               {item && (
                 <li>
                   <a
-                    target='_blank'
+                    target={item.target}
                     href={item.path}
                     class='flex lg:px-3 py-2 text-gray-600 hover:text-gray-900'
                   >
