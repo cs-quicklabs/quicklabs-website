@@ -1,61 +1,71 @@
 ---
-import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { Astronav, MenuItems, MenuIcon } from 'astro-navbar';
 
 const menuitems = [
-    {
-        title: "Home",
-        path: "/",
-    },
-    {
-        title: "Features",
-        path: "#features",
-    },
-    {
-        title: "Pricing",
-        path: "#pricing",
-    },
-    {
-        title: "Faqs",
-        path: "#faqs",
-    },
-    {
-        title: "Login ->",
-        path: "https://www.bio.quicklabs.in",
-    },
+  {
+    title: 'Home',
+    path: '/',
+    target: '_self',
+  },
+  {
+    title: 'Features',
+    path: '#features',
+    target: '_self',
+  },
+  {
+    title: 'Pricing',
+    path: '#pricing',
+    target: '_self',
+  },
+  {
+    title: 'Faqs',
+    path: '#faqs',
+    target: '_self',
+  },
+  {
+    title: 'Login ->',
+    path: 'https://teams.quicklabs.in',
+    target: '_blank',
+  },
 ];
 ---
 
-<header class="flex flex-col lg:flex-row justify-between items-center my-5 max-w-screen-xl mx-auto">
-    <Astronav>
-        <div class="flex w-full lg:w-auto items-center justify-between">
-            <a href="/" class="text-lg"
-                ><span class="font-extrabold text-slate-800">Quick</span><span
-                    class="text-slate-500"> Bio</span
-                >
-            </a>
-            <div class="block lg:hidden">
-                <MenuIcon class="w-4 h-4 text-gray-800" />
-            </div>
-        </div>
-        <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-            <ul class="flex flex-col lg:flex-row lg:gap-3">
-                {
-                    menuitems.map((item, index) => (
-                        <>
-                            {item && (
-                                <li>
-                                    <a
-                                        href={item.path}
-                                        class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900"
-                                    >
-                                        {item.title}
-                                    </a>
-                                </li>
-                            )}
-                        </>
-                    ))
-                }
-            </ul>
-        </MenuItems>
-    </Astronav>
+<header
+  class='flex flex-col lg:flex-row justify-between items-center my-5 max-w-screen-xl mx-auto'
+>
+  <Astronav>
+    <div class='flex w-full lg:w-auto items-center justify-between'>
+      <a href='/' class='text-lg'
+        ><span class='font-extrabold text-slate-800'>Quick</span><span
+          class='text-slate-500'
+        >
+          Teams</span
+        >
+      </a>
+      <div class='block lg:hidden'>
+        <MenuIcon class='w-4 h-4 text-gray-800' />
+      </div>
+    </div>
+    <MenuItems class='hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0'>
+      <ul class='flex flex-col lg:flex-row lg:gap-3'>
+        {
+          menuitems.map((item, index) => (
+            <>
+              {item && (
+                <li>
+                  <a
+                    target={item.target}
+                    href={item.path}
+                    class='flex lg:px-3 py-2 text-gray-600 hover:text-gray-900'
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              )}
+            </>
+          ))
+        }
+      </ul>
+    </MenuItems>
+  </Astronav>
 </header>
