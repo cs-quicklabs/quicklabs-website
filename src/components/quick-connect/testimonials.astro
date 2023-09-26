@@ -1,0 +1,52 @@
+---
+const testimonials = [
+  {
+    title:
+      'It is very easy to grouping the contact based on self preference like theme.',
+    person: 'Ankur Sharma',
+    position: 'Frontend Developer  | Crownstack',
+  },
+  {
+    title:
+      'Quick Connect offers a wide range of features that can be useful while comes to manage the people and task related to our contacts.',
+    person: 'Rishi Sharma',
+    position: 'Software Engineer | Freelancer',
+  },
+  {
+    title:
+      'This is a digital product which can help us to build a managable dashboard to all our daily basis tasks.',
+    person: 'Deepak',
+    position: 'HR Manager | Crownstack',
+  },
+];
+---
+
+<!-- Testimonials -->
+<div class='max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto'>
+  <!-- Grid -->
+  <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+    <!-- Card -->
+    {
+      testimonials.map((testimonial) => {
+        return (
+          <div class='flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700'>
+            <div class='flex-auto p-4 md:p-6'>
+              <p class='text-base text-gray-800 md:text-xl dark:text-white'>
+                <em>{testimonial.title}</em>
+              </p>
+            </div>
+
+            <div class='p-4 rounded-b-xl md:px-6'>
+              <h3 class='text-sm font-semibold text-gray-800 sm:text-base dark:text-gray-200'>
+                {testimonial.person}
+              </h3>
+              <p class='text-sm text-gray-500'>{testimonial.position}</p>
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
+  <!-- End Grid -->
+</div>
+<!-- End Testimonials -->
