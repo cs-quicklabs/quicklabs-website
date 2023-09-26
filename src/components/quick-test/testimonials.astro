@@ -1,0 +1,52 @@
+---
+const testimonials = [
+  {
+    title:
+      'It is a  solid test management tool that can simplify large data, supports integration with industry-standard tools, and easy UI for navigation. Quick Test has everything we needed with amazing service.',
+    person: 'Pavan Srinivas',
+    position: 'QA Analyst  | Crownstack',
+  },
+  {
+    title:
+      'Quick test offers a range of functionalities to manage the testing of the products. It is simple to use and really powerful. The metrics you can find in the platform are useful and let you focus on what matters, your product.',
+    person: 'Komal Sharma',
+    position: 'QA Lead | Lexis Tech',
+  },
+  {
+    title:
+      'Quick test is a user-friendly product that is currently changing the way we test. The Quick test Team is always willing to assist with issues and requests are dealt with very quickly. The team is enjoying the integrations that Quick test offers.',
+    person: 'Asha Verma',
+    position: 'Sr. QA | Playtech',
+  },
+];
+---
+
+<!-- Testimonials -->
+<div class='max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto'>
+  <!-- Grid -->
+  <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+    <!-- Card -->
+    {
+      testimonials.map((testimonial) => {
+        return (
+          <div class='flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700'>
+            <div class='flex-auto p-4 md:p-6'>
+              <p class='text-base text-gray-800 md:text-xl dark:text-white'>
+                <em>{testimonial.title}</em>
+              </p>
+            </div>
+
+            <div class='p-4 rounded-b-xl md:px-6'>
+              <h3 class='text-sm font-semibold text-gray-800 sm:text-base dark:text-gray-200'>
+                {testimonial.person}
+              </h3>
+              <p class='text-sm text-gray-500'>{testimonial.position}</p>
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
+  <!-- End Grid -->
+</div>
+<!-- End Testimonials -->

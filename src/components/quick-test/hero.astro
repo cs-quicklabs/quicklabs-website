@@ -1,22 +1,45 @@
-<div class="bg-white pb-16">  
-    <div class="relative isolate pt-8">    
-      <div class="py-8 sm:py-16 lg:pb-24">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl text-center">
-            <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Data to enrich your online business</h1>
-            <p class="mt-6 text-lg leading-8 text-gray-600">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
-            <div class="mt-10 flex items-center justify-center gap-x-6">
-              <a href="#" class="flex items-center justify-center rounded-md border border-transparent bg-gray-800 px-5 py-3 text-base font-medium text-white hover:bg-gray-900">Get started</a>
-              <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span aria-hidden="true">→</span></a>
-            </div>
+---
+import { Image } from 'astro:assets';
+import HeroImage from '@assets/quick-test/hero.png';
+---
+
+<div class='bg-white pb-16'>
+  <div class='relative isolate pt-8'>
+    <div class='py-8 sm:py-16 lg:pb-24'>
+      <div class='mx-auto max-w-7xl px-6 lg:px-8'>
+        <div class='mx-auto max-w-3xl text-center'>
+          <h1
+            class='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'
+          >
+            Effortless test cases management
+          </h1>
+          <p class='mt-6 text-lg leading-8 text-gray-600'>
+            Quick Test is an easy to use, simple yet effective test case
+            management tool to help you deliver quality software products.
+          </p>
+          <div class='mt-10 flex items-center justify-center gap-x-6'>
+            <a
+              href='https://test.quicklabs.in/auth/signup'
+              target='_blank'
+              class='flex items-center justify-center rounded-md border border-transparent bg-gray-800 px-5 py-3 text-base font-medium text-white hover:bg-gray-900'
+              >Get started</a
+            >
           </div>
-          <div class="mt-16 flow-root sm:mt-24">
-            <div class="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
-              <img src="https://tailwindui.com/img/component-images/project-app-screenshot.png" alt="App screenshot" width="2432" height="1442" class="rounded-md shadow-2xl ring-1 ring-gray-900/10">
-            </div>
+        </div>
+        <div class='mt-16 flow-root sm:mt-24'>
+          <div
+            class='-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4'
+          >
+            <Image
+              src={HeroImage}
+              alt='App screenshot'
+              width='2432'
+              height='1442'
+              class='rounded-md shadow-2xl ring-1 ring-gray-900/10'
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+</div>
