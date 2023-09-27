@@ -1,68 +1,74 @@
 ---
 const faqs = [
-    {
-        question: "How is this different than other solutions?",
-        answer: "Quick Bio believes in pay once and use forever model. You do not have to break your bank by paying every single month.",
-    },
-    {
-        question: "What is the refund policy?",
-        answer: "Since Quick Bio has only one time payment, you will not be billed monthly. However your payment can be reversed in first 3 days only.",
-    },
-    {
-        question: "What if I want to delete my account?",
-        answer: "You have full control over your account. You can edit, update or delete anytime you want. We will not keep you data.",
-    },
-    {
-        question: "What about privacy?",
-        answer: "We do not sell your data to any third party. Neither your, not your followers'. But we do charge one time fee to pay our bills.",
-    },
-    {
-        question: "What third party integrations are provided?",
-        answer: "You can use Quick Bio with your SaaS products which are in need of building one pager profiles, so that you do not have to built it yourself.",
-    },
-    {
-        question: "How payments are handled?",
-        answer: "Payments are handled through Stripe. We do not store your card information on our servers, neither do we sell any personal information.",
-    },
+  {
+    question: 'How is this different than other solutions?',
+    answer:
+      'Quick Bio believes in pay once and use forever model. You do not have to break your bank by paying every single month.',
+  },
+  {
+    question: 'What is the refund policy?',
+    answer:
+      'Since Quick Bio has only one time payment, you will not be billed monthly. However your payment can be reversed in first 3 days only.',
+  },
+  {
+    question: 'What if I want to delete my account?',
+    answer:
+      'You have full control over your account. You can edit, update or delete anytime you want. We will not keep you data.',
+  },
+  {
+    question: 'What about privacy?',
+    answer:
+      "We do not sell your data to any third party. Neither your, not your followers'. But we do charge one time fee to pay our bills.",
+  },
+  {
+    question: 'What third party integrations are provided?',
+    answer:
+      'You can use Quick Bio with your SaaS products which are in need of building one pager profiles, so that you do not have to built it yourself.',
+  },
+  {
+    question: 'How payments are handled?',
+    answer:
+      'Payments are handled through Stripe. We do not store your card information on our servers, neither do we sell any personal information.',
+  },
 ];
 ---
 
-<div class="bg-white" id="faqs">
-    <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center">
-            <h2
-                class="text-2xl font-bold leading-10 tracking-tight text-gray-900"
-            >
-                Frequently asked questions
-            </h2>
-            <p class="mt-6 text-base leading-7 text-gray-600">
-                Have a different question and can’t find the answer you’re
-                looking for? Reach out to our support team by <a
-                    href="mailto:admin@quicklabs.in"
-                    class="font-semibold text-slate-600 hover:text-indigo-600 hover:underline"
-                    >sending us an email</a
-                > and we’ll get back to you as soon as we can.
-            </p>
-        </div>
-        <div class="mt-20">
-            <dl
-                class="space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:grid-cols-3 lg:gap-x-10"
-            >
-                {
-                    faqs.map((faq) => {
-                        return (
-                            <div>
-                                <dt class="text-base font-semibold leading-7 text-gray-900">
-                                    {faq.question}
-                                </dt>
-                                <dd class="mt-2 text-base leading-7 text-gray-600">
-                                    {faq.answer}
-                                </dd>
-                            </div>
-                        );
-                    })
-                }
-            </dl>
-        </div>
+<div class='bg-white dark:bg-slate-900' id='faqs'>
+  <div class='mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8'>
+    <div class='mx-auto max-w-2xl text-center'>
+      <h2
+        class='text-2xl font-bold leading-10 tracking-tight text-gray-900 dark:text-gray-300'
+      >
+        Frequently asked questions
+      </h2>
+      <p class='mt-6 text-base leading-7 text-gray-600 dark:text-gray-500'>
+        Have a different question and can’t find the answer you’re looking for?
+        Reach out to our support team by <a
+          href='mailto:admin@quicklabs.in'
+          class='font-semibold text-slate-600 dark:text-slate-300 hover:text-indigo-600 hover:underline'
+          >sending us an email</a
+        > and we’ll get back to you as soon as we can.
+      </p>
     </div>
+    <div class='mt-20'>
+      <dl
+        class='space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:grid-cols-3 lg:gap-x-10'
+      >
+        {
+          faqs.map((faq) => {
+            return (
+              <div>
+                <dt class='text-base font-semibold leading-7 text-gray-900 dark:text-gray-300'>
+                  {faq.question}
+                </dt>
+                <dd class='mt-2 text-base leading-7 text-gray-600 dark:text-gray-500'>
+                  {faq.answer}
+                </dd>
+              </div>
+            );
+          })
+        }
+      </dl>
+    </div>
+  </div>
 </div>
