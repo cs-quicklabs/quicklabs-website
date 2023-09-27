@@ -29,33 +29,35 @@ const faqs = [
 ];
 ---
 
-<div class='bg-white' id='faqs'>
+<div class='bg-white dark:bg-slate-900' id='faqs'>
   <div class='mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8'>
     <div class='mx-auto max-w-2xl text-center'>
-      <h2 class='text-2xl font-bold leading-10 tracking-tight text-gray-900'>
+      <h2
+        class='text-2xl font-bold leading-10 tracking-tight text-gray-900 dark:text-gray-300'
+      >
         Frequently asked questions
       </h2>
-      <p class='mt-6 text-base leading-7 text-gray-600'>
-        If you can’t find what you’re looking for, email our support team at
-        <a
+      <p class='mt-6 text-base leading-7 text-gray-600 dark:text-gray-500'>
+        Have a different question and can’t find the answer you’re looking for?
+        Reach out to our support team by <a
           href='mailto:admin@quicklabs.in'
-          class='font-semibold text-slate-600 hover:text-indigo-600 hover:underline'
-          >admin@quicklabs.in</a
-        >. We will get back to you as soon as we can.
+          class='font-semibold text-slate-600 dark:text-slate-300 hover:text-indigo-600 hover:underline'
+          >sending us an email</a
+        > and we’ll get back to you as soon as we can.
       </p>
     </div>
     <div class='mt-20'>
       <dl
-        class='space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-10'
+        class='space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:grid-cols-3 lg:gap-x-10'
       >
         {
           faqs.map((faq) => {
             return (
               <div>
-                <dt class='text-base font-semibold leading-7 text-gray-900'>
+                <dt class='text-base font-semibold leading-7 text-gray-900 dark:text-gray-300'>
                   {faq.question}
                 </dt>
-                <dd class='mt-2 text-base leading-7 text-gray-600'>
+                <dd class='mt-2 text-base leading-7 text-gray-600 dark:text-gray-500'>
                   {faq.answer}
                 </dd>
               </div>

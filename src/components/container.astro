@@ -1,7 +1,13 @@
 ---
-const { class: className } = Astro.props;
+const { class: className, isNavbar = false } = Astro.props;
 ---
 
-<div class:list={["max-w-screen-xl mx-auto px-5", className]}>
+<div
+  class:list={[
+    'max-w-screen-xl mx-auto px-5',
+    className,
+    isNavbar ? 'sticky z-50 top-0' : '',
+  ]}
+>
   <slot />
 </div>
