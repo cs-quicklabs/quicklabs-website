@@ -4,7 +4,8 @@ const { title, lastItem, children } = Astro.props;
 ---
 
 <li class='relative'>
-  <DropdownContainer class='group'>
+  <!-- <DropdownContainer class='group'> -->
+  <menu class:list={['astronav-dropdown']} aria-expanded='false'>
     <button
       class='flex items-center gap-1 w-full lg:w-auto lg:px-3 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400'
     >
@@ -23,7 +24,11 @@ const { title, lastItem, children } = Astro.props;
           d='M19.5 8.25l-7.5 7.5-7.5-7.5'></path>
       </svg>
     </button>
-    <DropdownItems>
+    <!-- <DropdownItems> -->
+    <div
+      class:list={['astronav-dropdown dropdown-toggle hidden']}
+      aria-expanded='false'
+    >
       <div
         class:list={[
           'lg:absolute w-full lg:w-56 z-10',
@@ -47,6 +52,9 @@ const { title, lastItem, children } = Astro.props;
           }
         </div>
       </div>
-    </DropdownItems>
-  </DropdownContainer>
+    </div>
+
+    <!-- </DropdownItems> -->
+  </menu>
+  <!-- </DropdownContainer> -->
 </li>
