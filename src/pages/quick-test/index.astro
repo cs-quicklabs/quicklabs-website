@@ -1,32 +1,25 @@
 ---
-import Container from '@components/container.astro';
-import Hero from '@components/quick-test/hero.astro';
-import Layout from '@layouts/ProductLayout.astro';
-import Faq from '@components/quick-test/faq.astro';
-import Pricing from '@components/quick-test/pricing.astro';
-import Features from '@components/quick-test/features.astro';
-import Navbar from '@components/quick-test/navbar.astro';
-import Cta from '@components/quick-test/cta.astro';
-import Masonry from '@components/quick-test/masonry.astro';
-import Testimonials from '@components/quick-test/testimonials.astro';
-import Ctafooter from '@components/quick-test/ctafooter.astro';
+import Container from "@components/container.astro";
+import Hero from "@components/quick-test/hero.astro";
+import Layout from "@layouts/ProductLayout.astro";
+import Faq from "@components/quick-test/faq.astro";
+import Pricing from "@components/quick-test/pricing.astro";
+import Features from "@components/quick-test/features.astro";
+import Navbar from "@components/quick-test/navbar.astro";
+import Cta from "@components/quick-test/cta.astro";
+import Masonry from "@components/quick-test/masonry.astro";
+import Testimonials from "@components/quick-test/testimonials.astro";
 ---
 
-<Layout title=''>
+<Layout title="Quick Test">
   <Container>
     <Navbar />
     <Hero />
     <Features />
-
-    <!-- TODO: Add Image Screenshot for Quick Connect -->
     <Masonry />
-
     <Pricing />
     <Faq />
     <Testimonials />
-
     <Cta />
-
-    <Ctafooter />
   </Container>
 </Layout>
