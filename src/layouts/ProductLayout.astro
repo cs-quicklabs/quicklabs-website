@@ -5,12 +5,20 @@ import "@fontsource-variable/inter/index.css";
 
 export interface Props {
     title: string;
+    description: string;
+    image: string;
+    url: string;
 }
 
 const canonicalURL = new URL(Astro.request.url, Astro.site);
-const resolvedImageWithDomain = "https://www.quicklabs.in/thumbnail.png";
-const { title } = Astro.props;
-const makeTitle = title ? title : "Quicklabs";
+const resolvedImageWithDomain = "https://www.quicklabs.in/quicklabs.png";
+const { title, description, image, url } = Astro.props;
+const pageTitle = title ? title : "Quicklabs";
+const pageDescription = description
+    ? description
+    : "Quicklabs builds software for small businesses.";
+const pageImage = image ? image : resolvedImageWithDomain;
+const pageURL = url ? new URL(url) : canonicalURL;
 ---
 
 <!doctype html>
@@ -23,23 +31,18 @@ const makeTitle = title ? title : "Quicklabs";
 
         <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
         <SEO
-            title={makeTitle}
-            description="Quicklabs builds software for small businesses."
-            canonical={canonicalURL}
-            twitter={{
-                creator: "@surjithctly",
-                site: "@web3templates",
-                card: "summary_large_image",
-            }}
+            title={pageTitle}
+            description={pageDescription}
+            canonical={pageURL}
             openGraph={{
                 basic: {
                     url: canonicalURL,
                     type: "website",
-                    title: `Quicklabs`,
-                    image: resolvedImageWithDomain,
+                    title: pageTitle,
+                    image: pageImage,
                 },
                 image: {
-                    alt: "Astroship Homepage Screenshot",
+                    alt: "Quicklabs",
                 },
             }}
         />
