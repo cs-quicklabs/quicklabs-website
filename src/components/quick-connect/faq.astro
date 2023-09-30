@@ -1,68 +1,68 @@
 ---
 const faqs = [
   {
-    question: 'How do I cancel my subscription?',
+    question: "How do I cancel my subscription?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.You can cancel anytime you want. To do that, simply go to your settings, under subscriptions, and cancel your account. That is it. You will continue to have full access to Quick Connect until the end of your trial or current billing period. After cancellation, you will retain access to your account until the next time you are ready to use Quick Connect.",
+      "To do that, simply go to your settings, under subscriptions, and cancel your account. That is it. You will continue to have full access to Quick Connect until the end of your trial or current billing period.",
   },
   {
     question:
-      'While allowing other users to use my account, will it affect my account privacy?',
+      "While allowing other users to use my account, will it affect my account privacy?",
     answer:
-      'Yes, the invited user can use the same space as you have at the same time for his data and also peep into your things. Therefore this feature is resevered for only close family members.',
+      "Yes, the invited user can use the same space as you have at the same time for his data and also peep into your things. Therefore this feature is resevered for only close family members.",
   },
   {
-    question: 'How do you add bulk data at once?',
+    question: "How do you add bulk data at once?",
     answer:
-      'You can import contacts from CSV files and also export contacts from your account anytime you want.',
+      "You can import contacts from CSV files and also export contacts from your account anytime you want. In addition to that, we provide easy data export.",
   },
   {
-    question: 'Are there any long-term commitments or cancellation fees?',
+    question: "Are there any long-term commitments or cancellation fees?",
     answer:
-      'There are no hidden fees, ever. There are also no commitments whatsoever. You are free to leave whenever you want. You can upgrade, downgrade, cancel and delete your account when you want. There are no cancellation fees.',
+      "There are no hidden fees, ever. There are also no commitments whatsoever. You can upgrade, downgrade, cancel and delete your account when you want. ",
   },
   {
-    question: 'Will my data be used somewhere else?',
+    question: "Will my data be used somewhere else?",
     answer:
-      'NO, we give priority to your privacy. We will never sell your data to any third party. We will never use your data for any other purpose other than providing you the best experience.',
+      "NO, we give priority to your privacy. We will never sell your data to any third party. We will never use your data for any other purpose other than providing you the best experience.",
   },
   {
-    question: 'Can we expect more features?',
+    question: "Can we expect more features?",
     answer:
-      'Yes, we will continue to provide new features which can help you even more to build your relationships. Additionally, we will also provide you with the ability to suggest new features and if you are subscribed member, you will get all features with your current package without any new fees.',
+      "Yes, we will continue to provide new features which can help you even more to build your relationships. We will also provide you with the ability to suggest new features as well.",
   },
 ];
 ---
 
-<div class='bg-white dark:bg-slate-900' id='faqs'>
-  <div class='mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8'>
-    <div class='mx-auto max-w-2xl text-center'>
+<div class="bg-white dark:bg-slate-900" id="faqs">
+  <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
       <h2
-        class='text-2xl font-bold leading-10 tracking-tight text-gray-900 dark:text-gray-300'
+        class="text-2xl font-bold leading-10 tracking-tight text-gray-900 dark:text-gray-300"
       >
         Frequently asked questions
       </h2>
-      <p class='mt-6 text-base leading-7 text-gray-600 dark:text-gray-500'>
+      <p class="mt-6 text-base leading-7 text-gray-600 dark:text-gray-500">
         Have a different question and can’t find the answer you’re looking for?
         Reach out to our support team by <a
-          href='mailto:admin@quicklabs.in'
-          class='font-semibold text-slate-600 dark:text-slate-300 hover:text-indigo-600 hover:underline'
+          href="mailto:admin@quicklabs.in"
+          class="font-semibold text-slate-600 dark:text-slate-300 hover:text-indigo-600 hover:underline"
           >sending us an email</a
         > and we’ll get back to you as soon as we can.
       </p>
     </div>
-    <div class='mt-20'>
+    <div class="mt-20">
       <dl
-        class='space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:grid-cols-3 lg:gap-x-10'
+        class="space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:grid-cols-3 lg:gap-x-10"
       >
         {
           faqs.map((faq) => {
             return (
               <div>
-                <dt class='text-base font-semibold leading-7 text-gray-900 dark:text-gray-300'>
+                <dt class="text-base font-semibold leading-7 text-gray-900 dark:text-gray-300">
                   {faq.question}
                 </dt>
-                <dd class='mt-2 text-base leading-7 text-gray-600 dark:text-gray-500'>
+                <dd class="mt-2 text-base leading-7 text-gray-600 dark:text-gray-500">
                   {faq.answer}
                 </dd>
               </div>
