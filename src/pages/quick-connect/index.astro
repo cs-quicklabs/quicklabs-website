@@ -1,26 +1,26 @@
 ---
-import Container from '@components/container.astro';
-import Hero from '@components/quick-connect/hero.astro';
-import Layout from '@layouts/ProductLayout.astro';
-import Faq from '@components/quick-connect/faq.astro';
-import Pricing from '@components/quick-connect/pricing.astro';
-import Features from '@components/quick-connect/features.astro';
-import Navbar from '@components/quick-connect/navbar.astro';
-import Cta from '@components/quick-connect/cta.astro';
-import Masonry from '@components/quick-connect/masonry.astro';
-import Testimonials from '@components/quick-connect/testimonials.astro';
-import Ctafooter from '@components/quick-connect/ctafooter.astro';
+import Container from "@components/container.astro";
+import Hero from "@components/quick-connect/hero.astro";
+import Layout from "@layouts/ProductLayout.astro";
+import Faq from "@components/quick-connect/faq.astro";
+import Pricing from "@components/quick-connect/pricing.astro";
+import Features from "@components/quick-connect/features.astro";
+import Navbar from "@components/quick-connect/navbar.astro";
+import Cta from "@components/quick-connect/cta.astro";
+import Testimonials from "@components/quick-connect/testimonials.astro";
+import Ctafooter from "@components/quick-connect/ctafooter.astro";
 ---
 
-<Layout title=''>
+<Layout
+  title="Quick Connect"
+  description="A Personal relationship manager"
+  image="https://www.quicklabs.in/quick-connect.png"
+  url="https://www.quicklabs.in/quick-connect"
+>
   <Container>
     <Navbar />
     <Hero />
     <Features />
-
-    <!-- TODO: Add Image Screenshot for Quick Connect -->
-    <Masonry />
-
     <Pricing />
     <Faq />
     <Testimonials />
