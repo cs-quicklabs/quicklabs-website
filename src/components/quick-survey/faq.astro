@@ -1,33 +1,32 @@
 ---
-
 const faqs = [
     {
         question: "What's the best thing about Switzerland?",
-        answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
+        answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
     },
     {
         question: "What's the best thing about Switzerland?",
-        answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
+        answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
     },
     {
         question: "What's the best thing about Switzerland?",
-        answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
+        answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
     },
     {
         question: "What's the best thing about Switzerland?",
-        answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
+        answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
     },
     {
         question: "What's the best thing about Switzerland?",
-        answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
+        answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
     },
     {
         question: "What's the best thing about Switzerland?",
-        answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
-    }
-]
-
+        answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+    },
+];
 ---
+
 <div class="bg-white" id="faqs">
     <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
@@ -49,21 +48,20 @@ const faqs = [
             <dl
                 class="space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:grid-cols-3 lg:gap-x-10"
             >
-            {
-                faqs.map(faq => {
-                    return (
-                        <div>
-                            <dt class="text-base font-semibold leading-7 text-gray-900">
-                                {faq.question}
-                            </dt>
-                            <dd class="mt-2 text-base leading-7 text-gray-600">
-                                {faq.answer}
-                            </dd>
-                        </div>
-                    )
-                })
-            }
-    
+                {
+                    faqs.map((faq) => {
+                        return (
+                            <div>
+                                <dt class="text-base font-semibold leading-7 text-gray-900">
+                                    {faq.question}
+                                </dt>
+                                <dd class="mt-2 text-base leading-7 text-gray-600">
+                                    {faq.answer}
+                                </dd>
+                            </div>
+                        );
+                    })
+                }
             </dl>
         </div>
     </div>

@@ -1,56 +1,56 @@
 ---
-import Container from '@components/container.astro';
-import Dropdown from './dropdown.astro';
-import { Astronav, MenuItems, MenuIcon } from 'astro-navbar';
+import Container from "@components/container.astro";
+import Dropdown from "./dropdown.astro";
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
   {
-    title: 'Products',
-    path: '#',
+    title: "Products",
+    path: "#",
     children: [
-      { title: 'Quick Team', path: '/quick-teams' },
-      { title: 'Quick Connect', path: '/quick-connect' },
-      { title: 'Quick Test', path: '/quick-test' },
-      { title: 'Quick Checklist', path: '/quick-checklist' },
-      { title: 'Quick Bio', path: '/quick-bio' },
-      { title: 'Quick Send', path: '/quick-send' },
+      { title: "Quick Team", path: "/quick-teams" },
+      { title: "Quick Connect", path: "/quick-connect" },
+      { title: "Quick Test", path: "/quick-test" },
+      { title: "Quick Survey", path: "/quick-survey" },
+      { title: "Quick Bio", path: "/quick-bio" },
+      { title: "Quick Send", path: "/quick-send" },
     ],
   },
   {
-    title: 'About',
-    path: '/about',
+    title: "About",
+    path: "/about",
   },
   {
-    title: 'Blog',
-    path: '/blog',
+    title: "Blog",
+    path: "/blog",
   },
   {
-    title: 'Contact',
-    path: '/contact',
+    title: "Contact",
+    path: "/contact",
   },
 ];
 ---
 
 <Container isNavbar>
   <header
-    class='bg-white dark:bg-slate-900 flex flex-col lg:flex-row justify-between items-center py-5'
+    class="bg-white dark:bg-slate-900 flex flex-col lg:flex-row justify-between items-center py-5"
   >
     <Astronav>
-      <div class='flex w-full lg:w-auto items-center justify-between'>
-        <a href='/' class='text-lg'
-          ><span class='font-extrabold text-slate-800 dark:text-slate-100'
+      <div class="flex w-full lg:w-auto items-center justify-between">
+        <a href="/" class="text-lg"
+          ><span class="font-extrabold text-slate-800 dark:text-slate-100"
             >Quick</span
-          ><span class='font-semibold text-slate-500 dark:text-slate-400'>
+          ><span class="font-semibold text-slate-500 dark:text-slate-400">
             Labs</span
           >
         </a>
-        <div class='block lg:hidden'>
-          <MenuIcon class='w-4 h-4 text-gray-800 dark:text-gray-200' />
+        <div class="block lg:hidden">
+          <MenuIcon class="w-4 h-4 text-gray-800 dark:text-gray-200" />
         </div>
       </div>
-      <MenuItems class='hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0'>
+      <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
         <ul
-          class='flex flex-col lg:flex-row md:self-center w-full md:w-auto text-base lg:text-[0.9375rem] tracking-[0.01rem] font-medium'
+          class="flex flex-col lg:flex-row md:self-center w-full md:w-auto text-base lg:text-[0.9375rem] tracking-[0.01rem] font-medium"
         >
           {
             menuitems.map((item, index) => (
@@ -67,7 +67,7 @@ const menuitems = [
                   <li>
                     <a
                       href={item.path}
-                      class='flex lg:px-3 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400'
+                      class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400"
                     >
                       {item.title}
                     </a>
