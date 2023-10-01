@@ -1,26 +1,26 @@
 ---
-import Container from '@components/container.astro';
-import Hero from '@components/quick-teams/hero.astro';
-import Layout from '@layouts/ProductLayout.astro';
-import Faq from '@components/quick-teams/faq.astro';
-import Pricing from '@components/quick-teams/pricing.astro';
-import Features from '@components/quick-teams/features.astro';
-import Navbar from '@components/quick-teams/navbar.astro';
-import Cta from '@components/quick-teams/cta.astro';
-import Masonry from '@components/quick-teams/masonry.astro';
-import Testimonials from '@components/quick-teams/testimonials.astro';
-import Ctafooter from '@components/quick-teams/ctafooter.astro';
+import Container from "@components/container.astro";
+import Hero from "@components/quick-teams/hero.astro";
+import Layout from "@layouts/ProductLayout.astro";
+import Faq from "@components/quick-teams/faq.astro";
+import Pricing from "@components/quick-teams/pricing.astro";
+import Features from "@components/quick-teams/features.astro";
+import Navbar from "@components/quick-teams/navbar.astro";
+import Cta from "@components/quick-teams/cta.astro";
+import Testimonials from "@components/quick-teams/testimonials.astro";
+import Ctafooter from "@components/quick-teams/ctafooter.astro";
 ---
 
-<Layout title=''>
+<Layout
+  title="Quick Teams"
+  description="A Team management Solution"
+  image="https://www.quicklabs.in/quick-teams.png"
+  url="https://www.quicklabs.in/quick-teams"
+>
   <Container>
     <Navbar />
     <Hero />
     <Features />
-
-    <!-- TODO: Add Image Screenshot for Quick Connect -->
-    <Masonry />
-
     <Pricing />
     <Faq />
     <Testimonials />
