@@ -4,16 +4,19 @@ import Hero from "@components/quick-survey/hero.astro";
 import Layout from "@layouts/ProductLayout.astro";
 import Faq from "@components/quick-survey/faq.astro";
 import Pricing from "@components/quick-survey/pricing.astro";
-import Features from "@components/quick-survey/features.astro";
 import Navbar from "@components/quick-survey/navbar.astro";
 import Cta from "@components/quick-survey/cta.astro";
 ---
 
-<Layout title="">
+<Layout
+    title="Quick Survey"
+    description="Quickly Survey Builder for your business."
+    url="https://www.quicklabs.in/quick-survey"
+    image="https://www.quicklabs.in/quick-survey/quick-survey.png"
+>
     <Container>
         <Navbar />
         <Hero />
-        <Features />
         <Pricing />
         <Faq />
         <Cta />
