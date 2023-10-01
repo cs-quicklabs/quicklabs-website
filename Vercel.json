@@ -1,12 +1,13 @@
 {
     "rewrites": [
       {
-        "source": "/js/script.js",
+        "source": "/plausible/js/script.js",
         "destination": "https://plausible.io/js/script.js"
       },
       {
-        "source": "/api/event",
+        "source": "/plausible/api/event",
         "destination": "https://plausible.io/api/event"
       }
     ]
   }
+  
