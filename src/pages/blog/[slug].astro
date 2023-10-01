@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "@layouts/Layout.astro";
+import Layout from "@layouts/MainLayout.astro";
 import Container from "@components/container.astro";
 
 // Generate a new path for every collection entry
@@ -17,14 +17,15 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<Layout title={entry.data.title}>
+<Layout title={entry.data.title} description="" image="" url="">
   <Container>
     <div class="mx-auto max-w-3xl mt-14">
       <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
         {entry.data.category}
       </span>
       <h1
-        class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
+        class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight"
+      >
         {entry.data.title}
       </h1>
       <div class="flex gap-2 mt-3 items-center flex-wrap md:flex-nowrap">
@@ -34,7 +35,8 @@ const { Content } = await entry.render();
         <span class="text-gray-400">•</span>
         <time
           class="text-gray-400"
-          datetime={entry.data.publishDate.toISOString()}>
+          datetime={entry.data.publishDate.toISOString()}
+        >
           {entry.data.publishDate.toDateString()}
         </time>
         <span class="text-gray-400 hidden md:block">•</span>

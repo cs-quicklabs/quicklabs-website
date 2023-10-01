@@ -1,19 +1,20 @@
 ---
 import Container from "@components/container.astro";
 import { getFormattedDate } from "@utils/all";
-import Layout from "./Layout.astro";
+import BaseLayout from "./BaseLayout.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title={frontmatter.title}>
+<BaseLayout title={frontmatter.title} description="" image="" url="">
   <Container>
     <div class="mx-auto max-w-[735px] mt-14">
       <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
         {frontmatter.category}
       </span>
       <h1
-        class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
+        class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight"
+      >
         {frontmatter.title}
       </h1>
       <div class="flex gap-2 mt-3 items-center flex-wrap md:flex-nowrap">
@@ -46,4 +47,4 @@ const { frontmatter } = Astro.props;
       >
     </div>
   </Container>
-</Layout>
+</BaseLayout>
