@@ -47,15 +47,13 @@ const {
 <Container isNavbar>
   <header class='bg-white dark:bg-slate-900 mx-auto w-full' id='header'>
     <div
-      class='relative text-default py-3 mx-auto w-full items-center md:flex md:justify-between'
+      class='relative text-default py-4 mx-auto w-full items-center md:flex md:justify-between'
     >
       <div class='flex items-center justify-between'>
-        <a class='' href='/'>
+        <a class='text-2xl' href='/'>
           <span class='font-extrabold text-slate-800 dark:text-slate-100'
             >Quick</span
-          ><span class='font-semibold text-slate-500 dark:text-slate-400'>
-            Labs</span
-          >
+          ><span class='font-semibold text-slate-400'> Labs</span>
         </a>
         <div class='md:hidden'>
           <ToggleMenu />
@@ -67,7 +65,7 @@ const {
         aria-label='Main navigation'
       >
         <ul
-          class='md:items-center flex flex-col justify-start md:flex-row w-full md:w-auto text-base lg:text-[0.9375rem] tracking-[0.01rem] font-medium'
+          class='md:items-center flex flex-col justify-start md:flex-row w-full md:w-auto text-base lg:text-lg tracking-[0.01rem] font-medium'
         >
           {
             menuitems.map(({ title, path, children }) => (
