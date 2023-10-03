@@ -1,31 +1,31 @@
 ---
-import Container from "@components/container.astro";
-import { MenuIcon } from "astro-navbar";
-import ToggleMenu from "./toggleMenu.astro";
+import Container from '@components/container.astro';
+import { MenuIcon } from 'astro-navbar';
+import ToggleMenu from './toggleMenu.astro';
 const menuitems = [
   {
-    title: "Products",
-    path: "#",
+    title: 'Products',
+    path: '#',
     children: [
-      { title: "Quick Teams", path: "/quick-teams" },
-      { title: "Quick Connect", path: "/quick-connect" },
-      { title: "Quick Test", path: "/quick-test" },
-      { title: "Quick Survey", path: "/quick-survey" },
-      { title: "Quick Bio", path: "/quick-bio" },
-      { title: "Quick Send", path: "/quick-send" },
+      { title: 'Quick Teams', path: '/quick-teams' },
+      { title: 'Quick Connect', path: '/quick-connect' },
+      { title: 'Quick Test', path: '/quick-test' },
+      { title: 'Quick Survey', path: '/quick-survey' },
+      { title: 'Quick Bio', path: '/quick-bio' },
+      { title: 'Quick Send', path: '/quick-send' },
     ],
   },
   {
-    title: "About",
-    path: "/about",
+    title: 'About',
+    path: '/about',
   },
   {
-    title: "Blog",
-    path: "/blog",
+    title: 'Blog',
+    path: '/blog',
   },
   {
-    title: "Contact",
-    path: "/contact",
+    title: 'Contact',
+    path: '/contact',
   },
 ];
 
@@ -40,69 +40,74 @@ const {
   isSticky = false,
   isDark = false,
   isFullWidth = false,
-  position = "center",
+  position = 'center',
 } = Astro.props;
 ---
 
 <Container isNavbar>
-  <header class="bg-white dark:bg-slate-900 mx-auto w-full" id="header">
+  <header class='bg-white dark:bg-slate-900 mx-auto w-full' id='header'>
     <div
-      class="relative text-default py-3 mx-auto w-full items-center md:flex md:justify-between"
+      class='relative text-default py-3 mx-auto w-full items-center md:flex md:justify-between'
     >
-      <div class="flex items-center justify-between">
-        <a class="" href="/">
-          <span class="font-extrabold text-slate-800 dark:text-slate-100"
+      <div class='flex items-center justify-between'>
+        <a class='' href='/'>
+          <span class='font-extrabold text-slate-800 dark:text-slate-100'
             >Quick</span
-          ><span class="font-semibold text-slate-500 dark:text-slate-400">
+          ><span class='font-semibold text-slate-500 dark:text-slate-400'>
             Labs</span
           >
         </a>
-        <div class="md:hidden">
+        <div class='md:hidden'>
           <ToggleMenu />
         </div>
       </div>
 
       <nav
-        class="items-center w-full md:w-auto hidden md:flex text-default overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-auto md:mx-5"
-        aria-label="Main navigation"
+        class='items-center w-full md:w-auto hidden md:flex text-default overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-auto md:mx-5'
+        aria-label='Main navigation'
       >
         <ul
-          class="md:items-center flex flex-col justify-start md:flex-row w-full md:w-auto text-base lg:text-[0.9375rem] tracking-[0.01rem] font-medium"
+          class='md:items-center flex flex-col justify-start md:flex-row w-full md:w-auto text-base lg:text-[0.9375rem] tracking-[0.01rem] font-medium'
         >
           {
             menuitems.map(({ title, path, children }) => (
-              <li class={children?.length ? "dropdown" : ""}>
+              <li class={children?.length ? 'dropdown' : ''}>
                 {children?.length ? (
                   <>
-                    <button class="flex items-center gap-1 w-full md:w-auto md:px-3 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400">
+                    <button class='flex items-center gap-1 w-full md:w-auto md:px-3 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400'>
                       <span>{title}</span>
                       <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="3"
-                        stroke="currentColor"
-                        class="w-3 h-3 mt-0.5 group-open:rotate-180"
+                        xmlns='http://www.w3.org/2000/svg'
+                        fill='none'
+                        viewBox='0 0 24 24'
+                        stroke-width='3'
+                        stroke='currentColor'
+                        class='w-3 h-3 mt-0.5 group-open:rotate-180'
                       >
                         <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                          stroke-linecap='round'
+                          stroke-linejoin='round'
+                          d='M19.5 8.25l-7.5 7.5-7.5-7.5'
                         />
                       </svg>
                     </button>
 
-                    <ul class="dropdown-menu md:w-48 rounded md:absolute md:hidden font-medium md:min-w-[200px] md:bg-white md:dark:bg-slate-700 md:dark:border-slate-700 md:dark:border-none md:rounded-md md:shadow md:border">
+                    <div
+                      role='list'
+                      class='dropdown-menu md:w-48 rounded md:absolute md:hidden font-medium md:min-w-[200px] md:bg-white md:dark:bg-slate-700 md:dark:border-slate-700 md:dark:border-none md:rounded-md md:shadow md:border'
+                    >
                       {children.map(({ title: title2, path: path2 }) => (
-                        <li class="px-6 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400 hover:bg-slate-200 dark:hover:bg-slate-800">
-                          <a href={path2}>{title2}</a>
-                        </li>
+                        <a href={path2}>
+                          <div class='px-6 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400 hover:bg-slate-200 dark:hover:bg-slate-800'>
+                            {title2}
+                          </div>
+                        </a>
                       ))}
-                    </ul>
+                    </div>
                   </>
                 ) : (
                   <a
-                    class="flex md:px-3 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400"
+                    class='flex md:px-3 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400'
                     href={path}
                   >
                     {title}
