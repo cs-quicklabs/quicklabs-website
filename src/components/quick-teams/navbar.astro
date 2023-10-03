@@ -1,66 +1,64 @@
 ---
-import Container from '@components/container.astro';
-import ToggleMenu from '@components/navbar/toggleMenu.astro';
+import Container from "@components/container.astro";
+import ToggleMenu from "@components/navbar/toggleMenu.astro";
 
 const menuitems = [
   {
-    title: 'Home',
-    path: '/',
-    target: '_self',
+    title: "Home",
+    path: "/",
+    target: "_self",
   },
   {
-    title: 'Features',
-    path: '#features',
-    target: '_self',
+    title: "Features",
+    path: "#features",
+    target: "_self",
   },
   {
-    title: 'Pricing',
-    path: '#pricing',
-    target: '_self',
+    title: "Pricing",
+    path: "#pricing",
+    target: "_self",
   },
   {
-    title: 'Faqs',
-    path: '#faqs',
-    target: '_self',
+    title: "Faqs",
+    path: "#faqs",
+    target: "_self",
   },
   {
-    title: 'Login ->',
-    path: 'https://teams.quicklabs.in/users/sign_in',
-    target: '_blank',
+    title: "Login ->",
+    path: "https://teams.quicklabs.in/users/sign_in",
+    target: "_blank",
   },
 ];
 ---
 
 <Container isNavbar>
-  <header class='bg-white dark:bg-slate-900 mx-auto w-full' id='header'>
+  <header class="bg-white dark:bg-slate-900 mx-auto w-full" id="header">
     <div
-      class='relative text-default py-3 mx-auto w-full items-center md:flex md:justify-between'
+      class="relative text-default py-4 mx-auto w-full items-center md:flex md:justify-between"
     >
-      <div class='flex items-center justify-between'>
-        <a class='' href='/quick-teams'>
-          <span class='font-extrabold text-slate-800 dark:text-slate-100'
+      <div class="flex items-center justify-between">
+        <a class="text-2xl" href="/quick-teams">
+          <span class="font-extrabold text-slate-800 dark:text-slate-100"
             >Quick</span
-          ><span class='font-semibold text-slate-500 dark:text-slate-400'>
-            Teams</span
-          >
+          ><span class="font-semibold text-slate-400"> Teams</span>
         </a>
-        <div class='md:hidden'>
+        <div class="md:hidden">
           <ToggleMenu />
         </div>
       </div>
 
       <nav
-        class='items-center w-full md:w-auto hidden md:flex text-default overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-auto md:mx-5'
-        aria-label='Main navigation'
+        class="items-center w-full md:w-auto hidden md:flex text-default overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-auto md:mx-5"
+        aria-label="Main navigation"
       >
         <ul
-          class='md:items-center flex flex-col justify-start md:flex-row w-full md:w-auto text-base lg:text-[0.9375rem] tracking-[0.01rem] font-medium'
+          class="md:items-center flex flex-col justify-start md:flex-row w-full md:w-auto text-base lg:text-lg tracking-[0.01rem] font-medium"
         >
           {
             menuitems.map(({ title, path, target: hrefTarget }) => (
-              <li class='menubar'>
+              <li class="menubar">
                 <a
-                  class='flex md:px-3 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400'
+                  class="flex md:px-3 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400"
                   href={path}
                   target={hrefTarget}
                 >
