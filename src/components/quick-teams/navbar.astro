@@ -1,69 +1,76 @@
 ---
-import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import Container from '@components/container.astro';
+import ToggleMenu from '@components/navbar/toggleMenu.astro';
 
 const menuitems = [
   {
-    title: "Home",
-    path: "/",
-    target: "_self",
+    title: 'Home',
+    path: '/',
+    target: '_self',
   },
   {
-    title: "Features",
-    path: "#features",
-    target: "_self",
+    title: 'Features',
+    path: '#features',
+    target: '_self',
   },
   {
-    title: "Pricing",
-    path: "#pricing",
-    target: "_self",
+    title: 'Pricing',
+    path: '#pricing',
+    target: '_self',
   },
   {
-    title: "Faqs",
-    path: "#faqs",
-    target: "_self",
+    title: 'Faqs',
+    path: '#faqs',
+    target: '_self',
   },
   {
-    title: "Login ->",
-    path: "https://teams.quicklabs.in/users/sign_in",
-    target: "_blank",
+    title: 'Login ->',
+    path: 'https://teams.quicklabs.in/users/sign_in',
+    target: '_blank',
   },
 ];
 ---
 
-<header
-  class="flex flex-col lg:flex-row justify-between items-center my-5 max-w-screen-xl mx-auto"
->
-  <Astronav>
-    <div class="flex w-full lg:w-auto items-center justify-between">
-      <a href="/quick-teams" class="text-lg"
-        ><span class="font-extrabold text-slate-800 dark:text-slate-300"
-          >Quick</span
-        ><span class="text-slate-500 dark:text-slate-400"> Teams</span>
-      </a>
-      <div class="block lg:hidden">
-        <MenuIcon class="w-4 h-4 text-gray-800 dark:text-gray-200" />
+<Container isNavbar>
+  <header class='bg-white dark:bg-slate-900 mx-auto w-full' id='header'>
+    <div
+      class='relative text-default py-3 mx-auto w-full items-center md:flex md:justify-between'
+    >
+      <div class='flex items-center justify-between'>
+        <a class='' href='/quick-teams'>
+          <span class='font-extrabold text-slate-800 dark:text-slate-100'
+            >Quick</span
+          ><span class='font-semibold text-slate-500 dark:text-slate-400'>
+            Teams</span
+          >
+        </a>
+        <div class='md:hidden'>
+          <ToggleMenu />
+        </div>
       </div>
+
+      <nav
+        class='items-center w-full md:w-auto hidden md:flex text-default overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-auto md:mx-5'
+        aria-label='Main navigation'
+      >
+        <ul
+          class='md:items-center flex flex-col justify-start md:flex-row w-full md:w-auto text-base lg:text-[0.9375rem] tracking-[0.01rem] font-medium'
+        >
+          {
+            menuitems.map(({ title, path, target: hrefTarget }) => (
+              <li class='menubar'>
+                <a
+                  class='flex md:px-3 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400'
+                  href={path}
+                  target={hrefTarget}
+                >
+                  {title}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
     </div>
-    <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-      <ul class="flex flex-col lg:flex-row lg:gap-3">
-        {
-          menuitems.map((item, index) => (
-            <>
-              {item && (
-                <li>
-                  <a
-                    target={item.target}
-                    href={item.path}
-                    class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400"
-                  >
-                    {item.title}
-                  </a>
-                </li>
-              )}
-            </>
-          ))
-        }
-      </ul>
-    </MenuItems>
-  </Astronav>
-</header>
+  </header>
+</Container>
