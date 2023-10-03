@@ -1,17 +1,17 @@
 <script is:inline>
 window.onload = function () {
     function toggleMenu() {
-        document.body.classList.toggle('overflow-hidden');
-        document.getElementById('header')?.classList.toggle('h-screen');
-        document.getElementById('header')?.classList.toggle('expanded');
-        document.querySelector('#header nav')?.classList.toggle('hidden');
+        document.body.classList.toggle("overflow-hidden");
+        document.getElementById("header")?.classList.toggle("h-screen");
+        document.getElementById("header")?.classList.toggle("expanded");
+        document.querySelector("#header nav")?.classList.toggle("hidden");
         document
-            .querySelector('#header > div > div:last-child')
-            ?.classList.toggle('hidden');
+            .querySelector("#header > div > div:last-child")
+            ?.classList.toggle("hidden");
     }
     function attachEvent(selector, event, fn) {
         const matches =
-            typeof selector === 'string'
+            typeof selector === "string"
                 ? document.querySelectorAll(selector)
                 : selector;
         if (matches && matches.length) {
@@ -20,44 +20,44 @@ window.onload = function () {
             });
         }
     }
-    attachEvent('#header nav ul li.dropdown', 'click', function () {
-        document.querySelector('.dropdown-menu')?.classList.toggle('md:hidden');
+    attachEvent("#header nav ul li.dropdown", "click", function () {
+        document.querySelector(".dropdown-menu")?.classList.toggle("md:hidden");
     });
 
-    attachEvent('#header nav ul li.menubar', 'click', function () {
-        console.log('I am click  in menubar');
-        const matches = document.querySelectorAll('[data-aw-toggle-menu]');
+    attachEvent("#header nav ul li.menubar", "click", function () {
+        console.log("I am click  in menubar");
+        const matches = document.querySelectorAll("[data-aw-toggle-menu]");
         if (matches && matches.length) {
-            console.log('i am inside matches');
+            console.log("i am inside matches");
             matches.forEach((elem) => {
-                elem.classList.toggle('expanded');
-                toggleMenu;
+                elem.classList.toggle("expanded");
+                toggleMenu();
             });
         }
     });
 
-    attachEvent('[data-aw-toggle-menu]', 'click', function (_, elem) {
-        elem.classList.toggle('expanded');
+    attachEvent("[data-aw-toggle-menu]", "click", function (_, elem) {
+        elem.classList.toggle("expanded");
         toggleMenu();
     });
     function appyHeaderStylesOnScroll() {
-        const header = document.getElementById('header');
+        const header = document.getElementById("header");
         if (
             lastKnownScrollPosition > 60 &&
-            !header.classList.contains('scroll')
+            !header.classList.contains("scroll")
         ) {
-            document.getElementById('header').classList.add('scroll');
+            document.getElementById("header").classList.add("scroll");
         } else if (
             lastKnownScrollPosition <= 60 &&
-            header.classList.contains('scroll')
+            header.classList.contains("scroll")
         ) {
-            document.getElementById('header').classList.remove('scroll');
+            document.getElementById("header").classList.remove("scroll");
         }
         ticking = false;
     }
     appyHeaderStylesOnScroll();
 
-    attachEvent([document], 'scroll', function () {
+    attachEvent([document], "scroll", function () {
         lastKnownScrollPosition = window.scrollY;
 
         if (!ticking) {
