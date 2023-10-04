@@ -1,8 +1,19 @@
 <script is:inline>
 window.onload = function () {
+    // function to toggle navbar menu
+    function toggleNavbarMenu() {
+        document.getElementById("header")?.classList.toggle("h-screen");
+        document.getElementById("header")?.classList.toggle("expanded");
+        document.querySelector("#header nav")?.classList.toggle("hidden");
+        document
+            .querySelector("#header > div > div:last-child")
+            ?.classList.toggle("hidden");
+    }
+
+    // initial eventListener function to toggle classes
     function attachEvent(selector, event, fn) {
         const matches =
-            typeof selector === 'string'
+            typeof selector === "string"
                 ? document.querySelectorAll(selector)
                 : selector;
         if (matches && matches.length) {
@@ -11,47 +22,50 @@ window.onload = function () {
             });
         }
     }
-    attachEvent('#header nav ul li.dropdown', 'click', function () {
-        document.querySelector('.dropdown-menu')?.classList.toggle('md:hidden');
+
+    // toggling dropdown menu in navbar
+    attachEvent("#header nav ul li.dropdown > button", "click", function () {
+        document.querySelector(".dropdown-menu")?.classList.toggle("hidden");
     });
 
-    attachEvent('[data-aw-toggle-menu]', 'click', function (_, elem) {
-        elem.classList.toggle('expanded');
-        document.body.classList.toggle('overflow-hidden');
-        document.getElementById('header')?.classList.toggle('h-screen');
-        document.getElementById('header')?.classList.toggle('expanded');
-        document.getElementById('header')?.classList.toggle('bg-page');
-        document.querySelector('#header nav')?.classList.toggle('hidden');
-        document
-            .querySelector('#header > div > div:last-child')
-            ?.classList.toggle('hidden');
-    });
-    function appyHeaderStylesOnScroll() {
-        const header = document.getElementById('header');
-        if (
-            lastKnownScrollPosition > 60 &&
-            !header.classList.contains('scroll')
-        ) {
-            document.getElementById('header').classList.add('scroll');
-        } else if (
-            lastKnownScrollPosition <= 60 &&
-            header.classList.contains('scroll')
-        ) {
-            document.getElementById('header').classList.remove('scroll');
-        }
-        ticking = false;
-    }
-    appyHeaderStylesOnScroll();
-
-    attachEvent([document], 'scroll', function () {
-        lastKnownScrollPosition = window.scrollY;
-
-        if (!ticking) {
-            window.requestAnimationFrame(() => {
-                appyHeaderStylesOnScroll();
+    // toggling navbar on click dropdwon menu options in mobile responsiveness
+    attachEvent("#header nav ul li.menubar", "click", function () {
+        const matches = document.querySelectorAll("[data-aw-toggle-menu]");
+        if (matches && matches.length) {
+            matches.forEach((elem) => {
+                elem.classList.toggle("expanded");
+                toggleNavbarMenu();
             });
-            ticking = true;
         }
+    });
+
+    // toggling navbar in mobileSize
+    attachEvent("[data-aw-toggle-menu]", "click", function (_, elem) {
+        elem.classList.toggle("expanded");
+        toggleNavbarMenu();
+    });
+
+    // Define the mobile size
+    const mobileSize = 768;
+
+    // Get the initial window width
+    let pastWidth = window.innerWidth;
+
+    // Add a resize event listener
+    window.addEventListener("resize", function () {
+        // Get the current window width
+        const width = window.innerWidth;
+
+        // Check if there's a change from mobile to non-mobile or vice versa
+        if (
+            (width < mobileSize && pastWidth > mobileSize) ||
+            (width > mobileSize && pastWidth < mobileSize)
+        ) {
+            document.querySelector(".dropdown-menu")?.classList.add("hidden");
+        }
+
+        // Update the pastWidth variable with the current width
+        pastWidth = width;
     });
 };
 </script>

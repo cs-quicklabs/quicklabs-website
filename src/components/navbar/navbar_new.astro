@@ -45,17 +45,18 @@ const {
 ---
 
 <Container isNavbar>
-  <header class="bg-white dark:bg-slate-900 mx-auto w-full" id="header">
+  <header
+    class="bg-white dark:bg-slate-900 mx-auto w-full md:h-auto"
+    id="header"
+  >
     <div
-      class="relative text-default py-3 mx-auto w-full items-center md:flex md:justify-between"
+      class="relative text-default py-4 mx-auto w-full items-center md:flex md:justify-between"
     >
       <div class="flex items-center justify-between">
         <a class="" href="/">
           <span class="font-extrabold text-slate-800 dark:text-slate-100"
             >Quick</span
-          ><span class="font-semibold text-slate-500 dark:text-slate-400">
-            Labs</span
-          >
+          ><span class="font-semibold text-slate-400"> Labs</span>
         </a>
         <div class="md:hidden">
           <ToggleMenu />
@@ -92,13 +93,18 @@ const {
                       </svg>
                     </button>
 
-                    <ul class="dropdown-menu md:w-48 rounded md:absolute md:hidden font-medium md:min-w-[200px] md:bg-white md:dark:bg-slate-700 md:dark:border-slate-700 md:dark:border-none md:rounded-md md:shadow md:border">
+                    <div
+                      role="list"
+                      class="dropdown-menu md:w-48 rounded md:absolute hidden font-medium md:min-w-[200px] md:bg-white md:dark:bg-slate-700 md:dark:border-slate-700 md:dark:border-none md:rounded-md md:shadow md:border"
+                    >
                       {children.map(({ title: title2, path: path2 }) => (
-                        <li class="px-6 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400 hover:bg-slate-200 dark:hover:bg-slate-800">
-                          <a href={path2}>{title2}</a>
-                        </li>
+                        <a href={path2}>
+                          <div class="px-6 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400 hover:bg-slate-200 dark:hover:bg-slate-800">
+                            {title2}
+                          </div>
+                        </a>
                       ))}
-                    </ul>
+                    </div>
                   </>
                 ) : (
                   <a

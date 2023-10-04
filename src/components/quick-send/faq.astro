@@ -1,70 +1,74 @@
 ---
-
 const faqs = [
-    {
-        question: "What's the best thing about Switzerland?",
-        answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
-    },
-    {
-        question: "What's the best thing about Switzerland?",
-        answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
-    },
-    {
-        question: "What's the best thing about Switzerland?",
-        answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
-    },
-    {
-        question: "What's the best thing about Switzerland?",
-        answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
-    },
-    {
-        question: "What's the best thing about Switzerland?",
-        answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
-    },
-    {
-        question: "What's the best thing about Switzerland?",
-        answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
-    }
-]
-
+  {
+    question: "How many users can I invite to my organization?",
+    answer:
+      "There is no limit on number of users and there is no pricing change based on number of users. Pricing is flat $49/month.",
+  },
+  {
+    question: "Where can I find my billing data?",
+    answer:
+      "Click Account from dropdown menu in top right corner of your dashboard and you will find your billing data.",
+  },
+  {
+    question: "What is the refund policy?",
+    answer:
+      "We do not offer refund although you can cancel your subscription at any time. However, if you have any questions or concerns, please contact us at admin@quicklabs.in",
+  },
+  {
+    question: "Is data of my organization safe?",
+    answer:
+      "Yes, we are not sharing any of your data with someone else. Also, our interal teams have strict data security policies and we will not share your data with anyone.",
+  },
+  {
+    question: "What kind of support I'll get if I have any questions?",
+    answer:
+      "You will do our best to answer your questions. If you have any questions or concerns, please contact us at admin@quicklabs.in anytime.",
+  },
+  {
+    question: "Can we expect more features?",
+    answer:
+      "Yes, we will continue to provide new features which can help you even more to build your relationships. We will also provide you with the ability to suggest new features as wells.",
+  },
+];
 ---
-<div class="bg-white" id="faqs">
-    <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center">
-            <h2
-                class="text-2xl font-bold leading-10 tracking-tight text-gray-900"
-            >
-                Frequently asked questions
-            </h2>
-            <p class="mt-6 text-base leading-7 text-gray-600">
-                Have a different question and can’t find the answer you’re
-                looking for? Reach out to our support team by <a
-                    href="mailto:admin@quicklabs.in"
-                    class="font-semibold text-slate-600 hover:text-indigo-600 hover:underline"
-                    >sending us an email</a
-                > and we’ll get back to you as soon as we can.
-            </p>
-        </div>
-        <div class="mt-20">
-            <dl
-                class="space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:grid-cols-3 lg:gap-x-10"
-            >
-            {
-                faqs.map(faq => {
-                    return (
-                        <div>
-                            <dt class="text-base font-semibold leading-7 text-gray-900">
-                                {faq.question}
-                            </dt>
-                            <dd class="mt-2 text-base leading-7 text-gray-600">
-                                {faq.answer}
-                            </dd>
-                        </div>
-                    )
-                })
-            }
-    
-            </dl>
-        </div>
+
+<div class="bg-white dark:bg-slate-900" id="faqs">
+  <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2
+        class="text-2xl font-bold leading-10 tracking-tight text-gray-900 dark:text-gray-300"
+      >
+        Frequently asked questions
+      </h2>
+      <p class="mt-6 text-base leading-7 text-gray-600 dark:text-gray-500">
+        Have a different question and can’t find the answer you’re looking for?
+        Reach out to our support team by <a
+          href="mailto:admin@quicklabs.in"
+          class="font-semibold text-slate-600 dark:text-slate-300 hover:text-indigo-600 hover:underline"
+          >sending us an email</a
+        > and we’ll get back to you as soon as we can.
+      </p>
     </div>
+    <div class="mt-20">
+      <dl
+        class="space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:grid-cols-3 lg:gap-x-10"
+      >
+        {
+          faqs.map((faq) => {
+            return (
+              <div>
+                <dt class="text-base font-semibold leading-7 text-gray-900 dark:text-gray-300">
+                  {faq.question}
+                </dt>
+                <dd class="mt-2 text-base leading-7 text-gray-600 dark:text-gray-500">
+                  {faq.answer}
+                </dd>
+              </div>
+            );
+          })
+        }
+      </dl>
+    </div>
+  </div>
 </div>
