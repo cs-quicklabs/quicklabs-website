@@ -1,85 +1,88 @@
 ---
 // @ts-ignore
-import { Icon } from 'astro-icon';
+import { Icon } from "astro-icon";
 
 const products = [
   {
-    title: 'Quick Teams',
+    title: "Quick Teams",
     description:
-      'Quickly manage your team, their schedule, KPIs, goals, performance, projects, milestones and much more.',
-    icon: 'bx:bxs-briefcase',
-    path: '/quick-teams',
+      "Quickly manage your team, their schedule, KPIs, goals, performance, projects, milestones and much more.",
+    icon: "bx:bxs-briefcase",
+    path: "/quick-teams",
   },
   {
-    title: 'Quick Connect',
+    title: "Quick Connect",
     description:
-      'Quickly document social interactions with your loved ones and never forget important details, not even the tiny ones.',
-    icon: 'bx:bxs-window-alt',
-    path: '/quick-connect',
+      "Quickly document social interactions with your loved ones and never forget important details, not even the tiny ones.",
+    icon: "bx:bxs-window-alt",
+    path: "/quick-connect",
   },
   {
-    title: 'Quick Test',
+    title: "Quick Test",
     description:
-      'Quickly manage your manual test cases, generate project health reports and deliver best quality products.',
-    icon: 'bx:bxs-data',
-    path: '/quick-test',
+      "Quickly manage your manual test cases, generate project health reports and deliver best quality products.",
+    icon: "bx:bxs-data",
+    path: "/quick-test",
   },
   {
-    title: 'Quick Survey',
+    title: "Quick Survey",
     description:
-      'Quickly build checklists and surveys and never forget any step of your process; share it with your team members.',
-    icon: 'bx:bxs-bot',
-    path: '/quick-survey',
+      "Quickly build checklists and surveys and never forget any step of your process; share it with your team members.",
+    icon: "bx:bxs-bot",
+    path: "/quick-survey",
   },
   {
-    title: 'Quick Bio',
+    title: "Quick Bio",
     description:
-      'Quickly build your one pager social or professional bio, share it with the world and let people know what are you up to.',
-    icon: 'bx:bxs-file-find',
-    path: '/quick-bio',
+      "Quickly build your one pager social or professional bio, share it with the world and let people know what are you up to.",
+    icon: "bx:bxs-file-find",
+    path: "/quick-bio",
   },
   {
-    title: 'Quick Send',
+    title: "Quick Send",
     description:
-      'Quickly add multiple communication channels like emails, SMS, Chats to your mobile and web apps.',
-    icon: 'bx:bxs-user',
-    path: '/quick-send',
+      "Quickly add multiple communication channels like emails, SMS, Chats to your mobile and web apps.",
+    icon: "bx:bxs-user",
+    path: "/quick-send",
   },
 ];
 ---
 
-<div class='mt-16 md:mt-0'>
-  <h2 class='text-4xl lg:text-5xl font-bold lg:tracking-tight'>
-    Explore our collection of <span class='whitespace-nowrap'
-      ><span
-        class='italic font-extrabold decoration-solid underline-offset-auto underline decoration-8 decoration-yellow-400'
-        >Quick</span
-      > products
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Explore our collection of <span class="whitespace-nowrap"
+      ><span class="italic font-extrabold">
+        <p
+          class="inline-block underline underline-offset-4 decoration-8 decoration-yellow-400"
+        >
+          Quick
+        </p>
+      </span> products
     </span>
   </h2>
-  <p class='text-lg mt-4 text-slate-600 dark:text-slate-500'>
+  <p class="text-lg mt-4 text-slate-600 dark:text-slate-500">
     Quicklabs builds easy to use software products that help you to manage your
     growing business.
   </p>
 </div>
 
-<div class='grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16'>
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
   {
     products.map((item) => (
-      <div class='flex gap-4 items-start'>
-        <div class='mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0'>
-          <Icon class='text-white' name={item.icon} />
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
         </div>
         <div>
-          <h3 class='font-semibold text-lg'>{item.title}</h3>{' '}
-          <p class='text-slate-500 mt-2 leading-relaxed'>{item.description}</p>
-          <p class='mt-2 hover:text-indigo-500'>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          <p class="mt-2 hover:text-indigo-500">
             <a
               href={item.path}
-              class='hover:underline hover:text-indigo-600 rounded-md text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100 leading-6 text-left text-black dark:text-white'
+              class="hover:underline hover:text-indigo-600 rounded-md text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100 leading-6 text-left text-black dark:text-white"
             >
-              Learn more{' '}
-              <span class='pl-1 ' aria-hidden='true'>
+              Learn more{" "}
+              <span class="pl-1 " aria-hidden="true">
                 →
               </span>
             </a>

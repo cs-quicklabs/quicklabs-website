@@ -20,46 +20,50 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
       <h2 class="font-bold text-3xl">
-        Empowering businesses with <span
-          class="italic
-          font-extrabold
-          decoration-solid
-          underline-offset-auto
+        Empowering businesses with <span class="italic font-extrabold">
+          <p
+            class="inline-block
           underline
+          underline-offset-4
           decoration-4
           decoration-yellow-400"
-          >Quick</span
-        > solutions.
+          >
+            Quick
+          </p>
+           solutions.
+        </span>
+        <p class="text-lg leading-relaxed text-slate-500">
+          We are a small passionate team of developers and designers who love to
+          build and create new things. We are located in the beautiful city of
+          Noida, India.
+        </p>
       </h2>
-      <p class="text-lg leading-relaxed text-slate-500">
-        We are a small passionate team of developers and designers who love to
-        build and create new things. We are located in the beautiful city of
-        Noida, India.
-      </p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      {
-        publishedTeamMembers.map((teamMemberEntry) => (
-          <div class="group">
-            <div class="w-full aspect-square">
-              <Image
-                src={teamMemberEntry.data.avatar.src}
-                alt={teamMemberEntry.data.avatar.alt}
-                width={272}
-                height={272}
-                class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
-              />
-            </div>
+      <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+        {
+          publishedTeamMembers.map((teamMemberEntry) => (
+            <div class="group">
+              <div class="w-full aspect-square">
+                <Image
+                  src={teamMemberEntry.data.avatar.src}
+                  alt={teamMemberEntry.data.avatar.alt}
+                  width={272}
+                  height={272}
+                  class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
+                />
+              </div>
 
-            <div class="mt-4 text-center">
-              <h2 class="text-lg text-gray-800">{teamMemberEntry.data.name}</h2>
-              <h3 class="text-sm text-slate-500">
-                {teamMemberEntry.data.title}
-              </h3>
+              <div class="mt-4 text-center">
+                <h2 class="text-lg text-gray-800">
+                  {teamMemberEntry.data.name}
+                </h2>
+                <h3 class="text-sm text-slate-500">
+                  {teamMemberEntry.data.title}
+                </h3>
+              </div>
             </div>
-          </div>
-        ))
-      }
+          ))
+        }
+      </div>
     </div>
   </Container>
 </Layout>
