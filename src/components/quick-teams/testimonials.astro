@@ -2,45 +2,45 @@
 const testimonials = [
   {
     title:
-      'It is very helpful to track everything related to projects, be it employee schedules, project milestones, project documents or timesheets all are arranged in one place.',
-    person: 'Krishna Yadav',
-    position: 'Project Manager  | Crownstack',
+      "It is very helpful to track everything related to projects, be it employees schedule, project milestones, project documents or timesheets all are arranged in one place.",
+    person: "Krishna Yadav",
+    position: "Project Manager  | Crownstack",
   },
   {
     title:
-      'Employee scheduling, timesheer and team management becomes very easy. Various feature all under one place, either it is assigning todos to team or individual employee',
-    person: 'Abhishek',
-    position: 'Associate Team Lead | Bridgstone',
+      "Employee scheduling, timesheet and team management becomes very easy. Various feature all under one place, either it is assigning todos to team or individual employee",
+    person: "Abhishek",
+    position: "Associate Team Lead | Bridgstone",
   },
   {
     title:
-      'It is nice to manage assign and manage KPI and initiate surveys to keep organization and employee feedback in one place.',
-    person: 'Deepika Gupta',
-    position: 'Delivery Head | Crownstack',
+      "It is nice to assign and manage KPI and initiate surveys to keep organization and employee feedback in one place.",
+    person: "Deepika Gupta",
+    position: "Delivery Head | Crownstack",
   },
 ];
 ---
 
 <!-- Testimonials -->
-<div class='max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto'>
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
   <!-- Grid -->
-  <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     <!-- Card -->
     {
       testimonials.map((testimonial) => {
         return (
-          <div class='flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700'>
-            <div class='flex-auto p-4 md:p-6'>
-              <p class='text-base text-gray-800 md:text-xl dark:text-white'>
+          <div class="flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700">
+            <div class="flex-auto p-4 md:p-6">
+              <p class="text-base text-gray-800 md:text-xl dark:text-white">
                 <em>{testimonial.title}</em>
               </p>
             </div>
 
-            <div class='p-4 rounded-b-xl md:px-6'>
-              <h3 class='text-sm font-semibold text-gray-800 sm:text-base dark:text-gray-200'>
+            <div class="p-4 rounded-b-xl md:px-6">
+              <h3 class="text-sm font-semibold text-gray-800 sm:text-base dark:text-gray-200">
                 {testimonial.person}
               </h3>
-              <p class='text-sm text-gray-500'>{testimonial.position}</p>
+              <p class="text-sm text-gray-500">{testimonial.position}</p>
             </div>
           </div>
         );
