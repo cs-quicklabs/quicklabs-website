@@ -17,7 +17,7 @@
     "@fontsource-variable/inter": "^5.0.5",
     "@tailwindcss/typography": "^0.5.9",
     "astro": "latest",
-    "astro-icon": "^0.8.1",
+    "astro-icon": "^1.1.0",
     "astro-navbar": "^2.0.1",
     "astro-seo": "^0.7.5",
     "tailwindcss": "^3.0.24"
