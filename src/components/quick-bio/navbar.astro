@@ -1,6 +1,7 @@
 ---
 import Container from "@components/container.astro";
 import ToggleMenu from "@components/navbar/toggleMenu.astro";
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
   {
@@ -25,7 +26,7 @@ const menuitems = [
   },
   {
     title: "Login",
-    path: "https://www.bio.quicklabs.in",
+    path: "https://bio.quicklabs.in",
     target: "_blank",
   },
 ];
@@ -40,10 +41,10 @@ const menuitems = [
       class="relative text-default py-4 mx-auto w-full items-center md:flex md:justify-between"
     >
       <div class="flex items-center justify-between">
-        <a class="" href="/quick-send">
+        <a class="" href="/quick-bio">
           <span class="font-extrabold text-slate-800 dark:text-slate-100"
             >Quick</span
-          ><span class="font-semibold text-slate-400"> Send</span>
+          ><span class="font-semibold text-slate-400"> Bio</span>
         </a>
         <div class="md:hidden">
           <ToggleMenu />
@@ -62,7 +63,7 @@ const menuitems = [
               <>
                 <li class="menubar md:hidden">
                   <a
-                    class="flex md:px-3 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400"
+                    class="flex items-center md:px-3 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400"
                     href={path}
                     target={hrefTarget}
                   >
